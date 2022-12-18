@@ -1,0 +1,244 @@
+body {
+    color: #fff;
+    background-color: #251e3e;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* =============================================================================== */
+
+.header {
+    height: 100px;
+    background-color: #051e3e;
+}
+
+.header .container {
+    height: 100%;
+}
+
+.header__row {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    /* justify-content: space-between; */
+}
+.header__logo {
+    height: 100px;
+    width: 100px;
+}
+.header__title {
+    font-size: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header__burger {
+    position: relative;
+    width: 60px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.header__burger span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    height: 10px;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.4s
+}
+
+.header__burger span:nth-child(1) {
+    top: 0;
+}
+
+.header__burger span:nth-child(2) {
+    top: 20px;
+}
+
+.header__burger span:nth-child(3) {
+    top: 40px;
+}
+
+.header__burger.active span:nth-child(1){
+    transform: rotate(45deg) translate(0, 27px);
+}
+
+.header__burger.active span:nth-child(2){
+    translate: -100% 0;
+    opacity: 0;
+}
+
+.header__burger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(0, -27px);
+}
+
+.header__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #451e3e;
+    translate: 0 -100%;
+    transition: 0.4s;
+    z-index: 1;
+    text-align: center;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__menu.active {
+    translate: 0 0;
+}
+
+.header__list li {
+    margin: 20px 0px;
+}
+
+.header__list li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
+
+.header__list li a:hover {
+    text-decoration: underline;    
+}
+
+.footer {
+    background-color: #051e3e;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 100px;
+    font-size: 18px;
+}
+
+/* =============================================================================== */
+
+.problem {
+    padding: 50px 0px 20px;
+}
+
+.problem__title {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.problem__text {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.problem__image {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.problem__image img {
+    width: 100%;
+}
+
+/* =============================================================================== */
+
+.statistics {
+    padding: 50px 0px 50px;
+}
+
+.statistics__title {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.statistics__text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.statistics__table th {
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+.statistics__table td {
+    font-size: 20px;
+    line-height: 2;
+}
+
+/* =============================================================================== */
+
+.differences {
+    padding: 50px 0px 50px;
+}
+
+.differences__title {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.differences__text {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* =============================================================================== */
+
+.conclusion {
+    padding: 50px 0px 50px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.conclusion__column {
+    margin: 0px 40px 0px 0px;
+}
+
+.conclusion__column:first-child {
+    max-width: 600px;
+}
+
+.conclusion__column:last-child {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.conclusion__image img {
+    width: 100%;
+}
+
+.conclusion__title {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.conclusion__text {
+    font-size: 20px;
+    line-height: 1.5;
+}
